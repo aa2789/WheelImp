@@ -13,7 +13,7 @@ public class AuthorizationInterfaceStubBase
       if (!"Testteam".equals(teamName))  
                              return false;
       final boolean t =   
-              "TestPass".equals(password);
+              "Testpass".equals(password);
       return t;
    }
         
