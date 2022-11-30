@@ -6,9 +6,6 @@ import java.util.StringTokenizer;
 import java.util.Scanner;
 
 public class UserInterface {
-    private final int c1= 4;
-    private final int c2= 84;
-    private final int c3 = 74;
 
     private final String prompt;
     private final String wprompt;
@@ -24,15 +21,15 @@ public class UserInterface {
         return instance;
     }
     private UserInterface(){
-        wprompt = "Enter Wheel Pos ";
-        prompt ="0) Encrypt \n1) Decrypt \nanything else) Leave =>>";
+        wprompt = "Enter Wheel Position";
+        prompt ="\nSelect an option: \n(0) Encrypt \n(1) Decrypt \n(anything else) Leave\n\n>>";
         sc = new Scanner(System.in);
         br = new BufferedReader(new InputStreamReader(System.in));
     }
 
     public int getwPos(int w){
         while(true) {
-            System.out.println(wprompt + String.valueOf(w) + "-->");
+            System.out.print(wprompt + String.valueOf(w) + " >> ");
             try {
                 int sel = sc.nextInt();
                 return sel;
@@ -45,7 +42,7 @@ public class UserInterface {
     }
 
     private String getString(String pr){
-        System.out.println(pr);
+        System.out.print(pr);
         String st = null;
         try{
             st = br.readLine();
@@ -61,15 +58,15 @@ public class UserInterface {
     }
 
     public String getTeamName(){
-        String s = getString("Enter Team Name (or exit)-->");
+        String s = getString("Enter Team Name (or exit) >> ");
         return s;
     }
     public String getPassword(){
-        String s = getString("Enter Password (or exit)-->");
+        String s = getString("Enter Password  (or exit) >> ");
         return s;
     }
     public int getUserRequest(){
-        System.out.println(prompt);
+        System.out.print(prompt);
         while(true){
             try{
                 int sel = sc.nextInt();
