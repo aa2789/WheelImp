@@ -52,6 +52,7 @@ public class EncryptorControl
         dfi.closeInFile();
         efi.closeOutFile();
         aISB.SendEOK(tn," Wheel positions -> "+s, false);
+        eUI.output("Encryption was successful");
 
     }
 
@@ -90,6 +91,7 @@ public class EncryptorControl
 
         dfi.closeOutFile();
         aISB.SendDOK(tn,"",false);
+        eUI.output("Decryption was successful");
 
 
 
