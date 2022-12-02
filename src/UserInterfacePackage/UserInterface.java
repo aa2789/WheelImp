@@ -21,8 +21,8 @@ public class UserInterface {
         return instance;
     }
     private UserInterface(){
-        wprompt = "Enter Wheel Position";
-        prompt ="\nSelect an option: \n(0) Encrypt \n(1) Decrypt \n(anything else) Leave\n\n>>";
+        wprompt = "Enter Wheel Position ";
+        prompt ="\nSelect an option: \n(0) Encrypt \n(1) Decrypt \n(anything else) Leave\n\n>> ";
         sc = new Scanner(System.in);
         br = new BufferedReader(new InputStreamReader(System.in));
     }
